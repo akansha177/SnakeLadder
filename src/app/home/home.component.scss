@@ -1,0 +1,61 @@
+/* home.component.scss */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Comic Sans MS', cursive;
+  }
+  
+  .wrapper {
+    background-color: #3498db; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 70%;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    
+  }
+  
+  .card-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #2ecc71; /* Greenish background color */
+    color: #fff; /* White text color */
+    padding: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 45%;
+    margin-bottom: 20px;
+    position: relative;
+  
+    &:hover {
+      background-color: #27ae60; /* Darker green on hover */
+    }
+  
+    &.snake {
+      background-color: #e74c3c; /* Reddish background color for snake */
+      &:hover {
+        background-color: #c0392b; /* Darker red on hover */
+      }
+    }
+  
+    &.ladder {
+      background-color: #f39c12; /* Orange background color for ladder */
+      &:hover {
+        background-color: #d35400; /* Darker orange on hover */
+      }
+    }
+  }
+  

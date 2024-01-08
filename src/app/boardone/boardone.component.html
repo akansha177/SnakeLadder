@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <div class="container">
+      <h1>Snake & Ladder Game - Player 1</h1>
+    <div *ngFor="let row of matrix; let i = index" class="row">
+      <div *ngFor="let col of row; let j = index" class="cell" [ngClass]="{
+              'path': isPath(i, j),
+              'head': isHead(i, j),
+              'tail': isTail(i, j),
+              'ladder-path': isLadderPath(i, j),
+              'ladder-start': isLadderStart(i, j),
+                'ladder-end': isLadderEnd(i, j)
+           }" (click)="cellClicked(i, j)">
+        {{ matrix[i][j] }}
+        <div *ngIf="isExists(returnIndex(i,j)) !== ''" class="player-icon">
+          <img [src]="getPlayerIcon(isExists(returnIndex(i,j)))" alt="Player Icon" />
+        </div>
+      </div>
+    
+    </div>
+    </div>
+    <div>
+      <button (click)="rollDice()" class="roll-btn">Roll Dice</button>
+      <p class="roll-result">Result: <input type="text" class="dice" [value]="diceValue || ''" readonly /></p>
+    </div>
+    
+    
+    </div>
